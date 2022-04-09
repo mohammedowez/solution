@@ -38,7 +38,7 @@ int main()
 		for(int i=0;i<v.size();i++)
 		{
 			string s1=v[i];
-			sort(v[i].begin(),v[i].end());
+			sort(s1.begin(),s1.end());
 			
 			mp[s1].push_back(v[i]);
 			
@@ -47,13 +47,10 @@ int main()
 		// output is tested for various test cases
 		for(auto i:mp)
 		{
-			vector<string> vs(i.second);
-			
-			int n=vs.size();
-			for(int i=0;i<n;i++)
-				cout<<vs[i]<<" ";
-			
-		} 
+			for(auto j:i.second)
+				cout<<j<<" ";
+			cout<<"\n";
+		}
 		
 		
 	}
